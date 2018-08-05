@@ -1,0 +1,324 @@
+$border-color:#05276A;
+$leaf:0px;
+$container-background:#FFF4ED;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+
+body{
+  background:	#FE765E;
+}
+.container{
+background:$container-background;
+  height:300px;
+  width:410px;
+  margin:auto;
+  border:12px solid 	$border-color;
+  border-top-left-radius:150px;
+   border-top-right-radius:150px;
+  position:relative;
+  top:100px; 
+   
+}
+@mixin treeFun($left,$top){
+   position:absolute;
+  left:$left;
+  top:$top;
+  
+} 
+
+@mixin coconut(){
+  
+  border-radius:100%;
+  background:$border-color;
+  height:10px;
+  width:10px;
+} 
+.leaf{
+  width:60px;
+  height:30px;
+  background:transparent;
+  border-top-left-radius:100%;
+    border-top-right-radius:100%;
+  border-top:15px solid $border-color;
+ 
+}
+.one{
+@include treeFun(50px,100px);
+  
+}
+
+.two{
+  @include treeFun(56px,76px);
+   transform:rotate(48deg);
+}
+.three{
+  @include treeFun(105px,76px);
+ 
+   transform:rotate(-49deg);
+}
+.four{
+    @include treeFun(109px,100px);
+  
+}
+.five{
+   @include treeFun(154px,52px);
+  
+}
+.six{
+   @include treeFun(213px,52px);
+}
+
+.seven{
+   @include treeFun(166px,68px);
+  transform:rotate(-40deg);
+  
+}
+.eight{
+   @include treeFun(160px,32px);
+  transform:rotate(40deg);
+}
+.nine{
+   @include treeFun(208px,24px);
+  transform:rotate(-60deg);
+}
+.ten{
+   @include treeFun(205px,70px);
+  transform:rotate(40deg);
+}
+
+.tree{
+  width: 0;
+height: 0;
+border-style: solid;
+border-width: 0 9.5px 44px 9.5px;
+border-color: transparent transparent $border-color transparent;
+   @include treeFun(205px,80px);
+}
+
+.coconut-one{
+   @include coconut();
+  @include treeFun(210px,73px);
+}
+.coconut-two{
+   @include coconut();
+  @include treeFun(200px,80px);
+}
+.coconut-three{
+   @include coconut();
+  @include treeFun(220px,80px);
+}
+.a1{
+  @include treeFun(260px,90px);
+}
+.a2{
+  @include treeFun(318px,90px);
+}
+.a3{
+  @include treeFun(264px,67px);
+  transform:rotate(40deg);
+}
+.a4{
+  @include treeFun(314px,67px);
+  transform:rotate(-40deg);
+}
+.a5{
+  @include treeFun(311px,109px);
+  transform:rotate(40deg);
+}
+.tree-one{
+ width: 0;
+height: 0;
+border-style: solid;
+border-width: 0 9.5px 54px 9.5px;
+border-color: transparent transparent $border-color transparent;
+   @include treeFun(308px,110px);
+}
+.text{
+  font-family: 'Roboto', sans-serif;
+  font-size:47px;
+  color:$border-color;
+  font-weight:bold;
+  
+}
+.text-one{
+  @include treeFun(110px,240px);
+}
+.text-two{
+  @include treeFun(30px,140px);
+  font-size:35px;
+}
+.text-three{
+@include treeFun(30px,180px);
+  font-size:35px;
+}
+.text-four{
+  @include treeFun(330px,140px);
+  font-size:35px;
+}
+.text-five{
+  @include treeFun(338px,180px);
+  font-size:35px;
+  
+}
+.text-six{
+  @include treeFun(30px,240px);
+  font-family: 'Satisfy', cursive;
+  
+  
+}
+.base{
+  background:$border-color;
+  width:270px;
+  height:12px;
+  border-radius:50%;
+  @include treeFun(60px,220px);
+}
+.top-base{
+   background:$border-color;
+  width:240px;
+  height:13px;
+  border-top-left-radius:26px;
+  border-top-right-radius:26px;
+  @include treeFun(60px,130px);
+}
+.car-part-a1{
+  background:$border-color;
+  width:240px;
+  height:13px;
+  border-bottom-left-radius:26px;
+  border-bottom-right-radius:26px;
+  @include treeFun(60px,200px);
+  
+}
+.car-part-a2{
+  background:transparent;
+  @include treeFun(90px,199px);
+  height:0px;
+    width:20px;
+  border-bottom-left-radius:50%;
+  border-bottom-right-radius:50%;
+  border:13px solid $border-color;
+  }
+.car-part-a3{
+  background:transparent;
+  height:15px;
+  width:15px;
+  border-radius:50%;
+  border:3px solid $container-background;
+   @include treeFun(101px,197px);
+  z-index:1;
+}
+.car-part-a5{
+  @extend .car-part-a3;
+   @include treeFun(233px,192px);
+  background:$border-color;
+}
+.car-part-a4{
+  @extend .car-part-a2;
+  border-top-left-radius:50%;
+  border-top-right-radius:50%;
+   @include treeFun(220px,180px);
+  height:20px;
+}
+
+.car-part-a6{
+  height:70px;
+  width:10px;
+  background:$border-color;
+  @include treeFun(168px,130px);
+}
+.car-part-a7{
+  height:40px;
+  width:10px;
+  background:$border-color;
+  @include treeFun(205px,170px);
+}
+
+.car-part-a8{
+  height:10px;
+  width:190px;
+  background:$border-color;
+  @include treeFun(88px,160px);
+}
+.car-part-a9{
+  height:30px;
+  width:10px;
+  background:$border-color;
+  @include treeFun(128px,130px);
+}
+
+.car-part-a10{
+  height:60px;
+  width:10px;
+  background:$border-color;
+  @include treeFun(78px,150px);
+  transform:rotate(10deg);
+}
+
+.car-part-a11{
+  height:8px;
+  width:31px;
+  border:10px solid $border-color;
+  background:transparent;
+  @include treeFun(84px,141px);
+  
+  border-top-left-radius:16px;
+  
+}
+
+.car-part-a12{
+  height:8px;
+  width:31px;
+  border:10px solid $border-color;
+  background:transparent;
+  @include treeFun(164px,141px);
+  
+  border-top-right-radius:16px;
+  
+}
+.car-part-a13{
+  height:10px;
+  width:41px;
+@include treeFun(134px,141px);
+background:$border-color;
+}
+.car-part-a14{
+  height:10px;
+  width:80px;
+@include treeFun(134px,181px);
+background:$border-color;
+}
+.car-part-a15{
+  height:20px;
+  width:40px;
+  border:10px solid $border-color;
+  border-top-right-radius:20px;
+@include treeFun(80px,170px);
+  transform:rotate(-11deg);
+background:transparent;
+  z-index:0;
+  
+  border-bottom-left-radius:20px;
+  border-top-left-radius:20px;
+  border-bottom-left-radius:10px;
+}
+
+.car-part-a16{
+height:20px;
+  width:60px;
+  border:10px solid $border-color;
+  border-top-right-radius:20px;
+@include treeFun(208px,167px);
+  transform:rotate(-11deg);
+background:transparent;
+  z-index:0;
+}
+.board{
+  height:20px;
+  width:15px;
+  background:$border-color;
+  border-top-left-radius:40px;
+  @include treeFun(260px,115px);
+}
+
+
